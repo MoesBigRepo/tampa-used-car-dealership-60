@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tampa Used Car Dealership — 60-Day Launch Blueprint</title>
+<meta name="description" content="Comprehensive 60-day operational blueprint to launch an independent used car dealership in Tampa, Florida. Licensing, zoning, floor plan financing, inventory, and first sales with phasic checklists.">
+<style>
+:root {
+  --bg: #0a0e14;
+  --bg-card: #121821;
+  --bg-elevated: #1a2029;
+  --bg-hover: #1f2731;
+  --border: #26303d;
+  --border-strong: #374151;
+  --text: #e6edf3;
+  --text-dim: #9ba6b4;
+  --text-muted: #5f6b7a;
+  --accent: #f5a623;
+  --accent-bright: #fbbf24;
+  --accent-dim: #7a5410;
+  --success: #10b981;
+  --success-bg: #064e3b33;
+  --danger: #ef4444;
+  --danger-bg: #7f1d1d33;
+  --blue: #3b82f6;
+  --blue-bg: #1e3a8a33;
+  --shadow: 0 1px 3px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- STICKY NAV ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 20, 0.92);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.progress-bar-outer {
+  flex: 1;
+  min-width: 180px;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.progress-bar-inner {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.btn-danger:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 96px 0 72px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245, 166, 35, 0.08), transparent 70%),
+    var(--bg);
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  background: linear-gradient(180deg, #fff 0%, #c4ccd8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  font-size: 19px;
+  color: var(--text-dim);
+  max-width: 680px;
+  margin-bottom: 40px;
+  line-height: 1.55;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+
+.stat-value {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 64px 0 48px; }
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.section-intro {
+  font-size: 17px;
+  color: var(--text-dim);
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.55;
+}
+
+/* ---------- PHASE NAV ---------- */
+.phase-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.phase-nav a {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 14px;
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phase-nav a:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+}
+
+.phase-nav-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .phase-nav { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- PHASE CARDS ---------- */
+.phase {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 24px;
+  scroll-margin-top: 90px;
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.phase-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  color: #0a0e14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25);
+}
+
+.phase-head-text { flex: 1; min-width: 200px; }
+
+.phase-meta {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.phase-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.phase-progress {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  background: var(--bg-elevated);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.phase-summary {
+  color: var(--text-dim);
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.phase-body h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 24px 0 12px;
+}
+
+.phase-body h4:first-child { margin-top: 0; }
+
+.phase-body p {
+  color: var(--text-dim);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.phase-body ul { margin-left: 20px; margin-bottom: 12px; color: var(--text-dim); }
+.phase-body ul li { margin-bottom: 6px; font-size: 14px; }
+.phase-body strong { color: var(--text); font-weight: 600; }
+
+/* ---------- CHECKLIST ---------- */
+.checklist {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.checklist-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.check-item:first-of-type { border-top: none; }
+
+.check-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-strong);
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--bg-card);
+  transition: all 0.15s;
+  position: relative;
+}
+
+.check-item input[type="checkbox"]:hover { border-color: var(--accent); }
+
+.check-item input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.check-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #0a0e14;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.check-item label {
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.check-item input[type="checkbox"]:checked + label {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--text-muted);
+}
+
+/* ---------- DELIVERABLE CALLOUT ---------- */
+.deliverable {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--success-bg);
+  border-left: 3px solid var(--success);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.deliverable strong {
+  color: var(--success);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.warning {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--danger-bg);
+  border-left: 3px solid var(--danger);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.warning strong {
+  color: var(--danger);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--blue-bg);
+  border-left: 3px solid var(--blue);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.info strong {
+  color: var(--blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ---------- TABLES ---------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.data-table th {
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 14px 18px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table td:first-child { color: var(--text); font-weight: 600; }
+.data-table .num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.data-table tr.total td {
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ---------- LENDER CARDS ---------- */
+.lender-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.lender-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.lender-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.lender-card .lender-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.lender-card p {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* ---------- RISK REGISTER ---------- */
+.risk-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--danger);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+}
+
+.risk-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.risk-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--danger);
+  background: var(--danger-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.risk-item p {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.risk-item .mitigation {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.risk-item .mitigation strong {
+  color: var(--success);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ---------- RESOURCE LIST ---------- */
+.resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.resource {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.resource-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.resource-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.resource-detail {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 60px 0 80px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer .disclaim {
+  max-width: 620px;
+  margin: 16px auto 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------- PRINT ---------- */
+@media print {
+  body { background: #fff; color: #000; }
+  .topbar, .phase-nav, .btn { display: none !important; }
+  .hero { padding: 32px 0 24px; border-bottom: 2px solid #000; }
+  .hero h1 { -webkit-text-fill-color: #000; background: none; color: #000; font-size: 32px; }
+  .hero-sub, .section-intro, .phase-summary, .phase-body p,
+  .phase-body ul, .check-item label, .data-table td, .resource-detail,
+  .risk-item p, .lender-card p { color: #333; }
+  .phase, .checklist, .data-table, .lender-card, .resource, .risk-item,
+  .phase-nav a, .stat {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  .phase-num { background: #000 !important; color: #fff !important; }
+  section { padding: 24px 0; page-break-inside: avoid; }
+  .phase { page-break-inside: avoid; }
+  .check-item input[type="checkbox"] { border-color: #000; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">TPA &middot; 60-Day Blueprint</div>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="overall-progress"></div></div>
+    <div class="progress-text" id="overall-text">0% complete</div>
+    <div class="topbar-actions">
+      <button class="btn" onclick="window.print()">Print</button>
+      <button class="btn btn-danger" onclick="resetProgress()">Reset</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Tampa &middot; Florida &middot; Independent Used Dealership</div>
+    <h1>From Zero to Selling Cars in 60 Days.</h1>
+    <p class="hero-sub">An operational blueprint for launching a licensed independent used car dealership in Tampa, Florida. Covers entity formation, FLHSMV licensing, lot acquisition, floor plan financing, auction access, and your first retail sales. Check items off as you complete them &mdash; progress saves locally in your browser.</p>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-value">60</div>
+        <div class="stat-label">Days to First Sale</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">$50k</div>
+        <div class="stat-label">Minimum Capital</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">8</div>
+        <div class="stat-label">Execution Phases</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">VI</div>
+        <div class="stat-label">FL License Class</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="container">
+    <div class="section-eyebrow">Overview</div>
+    <h2 class="section-title">The Path in Eight Phases</h2>
+    <p class="section-intro">Each phase is sequenced so the outputs of one become the prerequisites of the next. The critical path runs through your <strong>lot</strong> (Phase 2) and your <strong>license</strong> (Phase 3&ndash;5). Everything else parallelizes around those two gates.</p>
+
+    <nav class="phase-nav">
+      <a href="#preflight"><span class="phase-nav-num">Pre-Flight</span>Readiness Check</a>
+      <a href="#phase-1"><span class="phase-nav-num">Phase 1 &middot; Days 1&ndash;7</span>Foundation &amp; Paper</a>
+      <a href="#phase-2"><span class="phase-nav-num">Phase 2 &middot; Days 8&ndash;14</span>Lot Hunt</a>
+      <a href="#phase-3"><span class="phase-nav-num">Phase 3 &middot; Days 15&ndash;21</span>License &amp; Insurance</a>
+      <a href="#phase-4"><span class="phase-nav-num">Phase 4 &middot; Days 22&ndash;28</span>Setup &amp; Inspection</a>
+      <a href="#phase-5"><span class="phase-nav-num">Phase 5 &middot; Days 29&ndash;35</span>License Issuance</a>
+      <a href="#phase-6"><span class="phase-nav-num">Phase 6 &middot; Days 36&ndash;42</span>First Inventory</a>
+      <a href="#phase-7"><span class="phase-nav-num">Phase 7 &middot; Days 43&ndash;49</span>Listings &amp; Go-Live</a>
+      <a href="#phase-8"><span class="phase-nav-num">Phase 8 &middot; Days 50&ndash;60</span>First Sales</a>
+      <a href="#budget"><span class="phase-nav-num">Reference</span>Budget Breakdown</a>
+      <a href="#risks"><span class="phase-nav-num">Reference</span>Risk Register</a>
+      <a href="#lenders"><span class="phase-nav-num">Reference</span>Floor Plan Lenders</a>
+      <a href="#resources"><span class="phase-nav-num">Reference</span>Florida Resources</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ===================== PRE-FLIGHT ===================== -->
+<section id="preflight">
+  <div class="container">
+    <div class="section-eyebrow">Before Day 1</div>
+    <h2 class="section-title">Pre-Flight Readiness</h2>
+    <p class="section-intro">Confirm these before you commit a single dollar. If any of the first three are "no", stop and fix that before starting the 60-day clock &mdash; the plan is built assuming they are all "yes".</p>
+
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">0</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Go / No-Go Gate</div>
+          <div class="phase-title">Readiness Check</div>
+        </div>
+        <div class="phase-progress" data-progress-for="preflight">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">A dealership is a cash-flow business with curtailment pressure, tag/title deadlines, and thin margins in the first 90 days. The biggest predictor of survival is starting with enough runway to absorb a slow month.</p>
+
+      <div class="checklist" data-checklist="preflight">
+        <div class="checklist-title">Readiness Gates</div>
+        <div class="check-item"><input type="checkbox" id="pf-credit"><label for="pf-credit">Personal FICO score confirmed at <strong>650+</strong> across all 3 bureaus</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-liquid"><label for="pf-liquid">Liquid capital of <strong>$50,000 minimum</strong> verified and accessible</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-background"><label for="pf-background">No felony convictions in last 10 years (FLHSMV disqualifier)</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-household"><label for="pf-household">Spouse/partner aligned &mdash; business takes 60&ndash;80 hr/wk for first 6 months</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-plan"><label for="pf-plan">One-page business plan drafted (target customer, price band, monthly unit target)</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-reserves"><label for="pf-reserves">Personal living expenses covered separately for 6 months without dealer income</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-cpa"><label for="pf-cpa">CPA identified for quarterly sales tax and year-end filings</label></div>
+        <div class="check-item"><input type="checkbox" id="pf-attorney"><label for="pf-attorney">Commercial real-estate attorney identified for lease review</label></div>
+      </div>
+
+      <div class="warning"><strong>Hard Stop</strong>If liquid capital is under $40k, do not start. Run the pre-flight stage longer, take a sales job at an existing dealer, save the capital. Undercapitalized dealerships fail in month 2&ndash;3, almost without exception.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 1 ===================== -->
+<section id="phase-1">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">1</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 1 &ndash; 7 &middot; Week 1</div>
+          <div class="phase-title">Foundation &amp; Paper</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-1">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">The legal and administrative scaffolding. Most of this is online and same-day. Get every item started on Day 1 in parallel &mdash; none of these steps depend on each other.</p>
+
+      <div class="phase-body">
+        <h4>Entity &amp; Tax Formation</h4>
+        <p>Form a Florida LLC via Sunbiz.org ($125). Choose a name that is generic enough to survive a brand pivot &mdash; avoid locking yourself to a specific make, model, or neighborhood. Get your EIN from IRS.gov the same day (free, 10-minute online process). File the DR-1 with the Florida Department of Revenue to register for sales tax &mdash; you will collect 7.5% in Hillsborough County.</p>
+
+        <h4>Banking &amp; Credit</h4>
+        <p>Open a dedicated business checking account at a dealer-friendly bank. <strong>Seacoast Bank, Regions, or a local credit union</strong> tend to be easier than the big 4 for a new dealership. Apply for a business credit card for recurring expenses (insurance, DMS, ad spend). Pull all 3 credit bureau reports and start disputing anything easy &mdash; your score directly affects floor plan terms.</p>
+
+        <h4>Education &amp; Association</h4>
+        <p>Book the earliest available <strong>FIADA 8-hour pre-licensing course</strong>. FIADA (Florida Independent Automobile Dealers Association) runs them weekly in the Tampa area. Join FIADA as a member ($400/yr) &mdash; the lot referrals and lender relationships pay for themselves inside the first month.</p>
+
+        <h4>Preliminary Lot Research</h4>
+        <p>While paperwork is in motion, start your saved searches on LoopNet and Crexi for commercial parcels zoned CG, IG, or with prior auto-use designation. Target zip codes: <strong>33578, 33584, 33610, 33619, 33635</strong>. Set alerts for anything under $4,000/mo with 8+ vehicle capacity.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-1">
+        <div class="checklist-title">Phase 1 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p1-llc"><label for="p1-llc">Form Florida LLC via Sunbiz.org ($125)</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-ein"><label for="p1-ein">Obtain EIN from IRS.gov (free)</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-bank"><label for="p1-bank">Open business checking account (Seacoast / Regions / CU)</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-dr1"><label for="p1-dr1">File DR-1 for Florida sales tax registration</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-credit-reports"><label for="p1-credit-reports">Pull all 3 credit bureau reports; dispute quick-win items</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-business-cc"><label for="p1-business-cc">Apply for business credit card</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-fiada-course"><label for="p1-fiada-course">Book 8-hour FIADA pre-licensing course</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-fiada-member"><label for="p1-fiada-member">Join FIADA ($400/yr membership)</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-business-email"><label for="p1-business-email">Set up business email (Google Workspace or similar)</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-business-plan"><label for="p1-business-plan">Draft one-page business plan</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-loopnet"><label for="p1-loopnet">Set up LoopNet, Crexi, CommercialCafe saved searches</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-target-zips"><label for="p1-target-zips">Shortlist 3&ndash;5 target zip codes for the lot</label></div>
+        <div class="check-item"><input type="checkbox" id="p1-contacts"><label for="p1-contacts">Identify CPA and commercial real-estate attorney</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>LLC formed. EIN in hand. Business bank account open. Sales tax registration pending. FIADA course booked. Credit reports pulled. Lot search underway.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 2 ===================== -->
+<section id="phase-2">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">2</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 8 &ndash; 14 &middot; Week 2</div>
+          <div class="phase-title">The Lot Hunt</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-2">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">This is where 90% of first-time dealers stall. The right lot makes everything downstream easy; the wrong lot burns the plan. Zoning is the hidden killer &mdash; a beautiful lot in the wrong zoning district is a dead lot.</p>
+
+      <div class="phase-body">
+        <h4>Target Zones</h4>
+        <p>Focus on <strong>unincorporated Hillsborough County</strong> rather than the City of Tampa proper &mdash; zoning is friendlier and rents are lower. Best hunting grounds:</p>
+        <ul>
+          <li><strong>Gibsonton</strong> &mdash; US-41 corridor, traditional small-dealer territory</li>
+          <li><strong>Riverview &amp; Brandon outskirts</strong> &mdash; growing traffic, mixed commercial</li>
+          <li><strong>Plant City</strong> &mdash; cheaper rent, slightly farther from buyer pool</li>
+          <li><strong>Adamo Drive (SR-60)</strong> corridor &mdash; legacy auto row</li>
+          <li><strong>US-301 south of Brandon</strong> &mdash; high visibility, commercial zoning</li>
+        </ul>
+
+        <h4>Zoning Requirements</h4>
+        <p>You need <strong>CG (Commercial General)</strong>, <strong>IG (Industrial General)</strong>, or a parcel with a verified prior auto-sales use. Parcels with an existing auto-sales history are gold &mdash; permits and approvals are already cleared. Pull a zoning verification letter from the Hillsborough County Development Services office <em>before</em> signing anything. Do not trust the listing agent's description.</p>
+
+        <h4>FLHSMV Minimums for the Lot</h4>
+        <ul>
+          <li>Permanent enclosed office (not a travel trailer)</li>
+          <li>Display area clearly separated from public right-of-way</li>
+          <li>Permanent dealer sign meeting local signage ordinance</li>
+          <li>Operational business phone line at the address</li>
+          <li>Restroom access for customers</li>
+          <li>Minimum display capacity typical target: 8&ndash;15 vehicles</li>
+        </ul>
+
+        <h4>Lease Terms</h4>
+        <p>Negotiate <strong>month-to-month or 6-month initial term</strong> with option to extend. Do not sign a 3-year lease on your first lot. You will learn more in the first 90 days than you expect, and you need the flexibility to relocate if the location underperforms or zoning surprises surface. Target rent: <strong>$1,500&ndash;$3,000/mo</strong>.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-2">
+        <div class="checklist-title">Phase 2 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p2-candidates"><label for="p2-candidates">Identify 5+ candidate lots meeting zoning + capacity targets</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-driveby"><label for="p2-driveby">Drive by every candidate in person; photograph each</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-shortlist"><label for="p2-shortlist">Shortlist top 2 for due diligence</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-zoning"><label for="p2-zoning">Pull zoning verification letter from Hillsborough County</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-prior-use"><label for="p2-prior-use">Verify prior auto-sales use (or CG/IG designation)</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-office-check"><label for="p2-office-check">Confirm permanent office structure meets FLHSMV minimums</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-signage"><label for="p2-signage">Verify municipal signage ordinance allowance</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-capacity"><label for="p2-capacity">Measure display area (8&ndash;15 vehicle target)</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-loi"><label for="p2-loi">Submit LOI on top choice</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-lease-review"><label for="p2-lease-review">Attorney review of lease before signing</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-lease-terms"><label for="p2-lease-terms">Negotiate MTM or 6-month term with extension option</label></div>
+        <div class="check-item"><input type="checkbox" id="p2-zoning-written"><label for="p2-zoning-written">Obtain zoning approval in writing before lease signing</label></div>
+      </div>
+
+      <div class="warning"><strong>Critical</strong>If prior use is anything other than auto sales and zoning is not CG/IG, assume "no" until the county confirms otherwise in writing. Every month spent fighting a rezoning battle is a month of rent + no license + no revenue.</div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>Lot identified. Zoning confirmed in writing. LOI accepted. Lease ready to sign pending final inspection-day prep.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 3 ===================== -->
+<section id="phase-3">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">3</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 15 &ndash; 21 &middot; Week 3</div>
+          <div class="phase-title">License Application &amp; Insurance</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-3">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">With the lot identified, you can now submit a real application. Everything in this phase has to happen before FLHSMV inspects the lot in Phase 4&ndash;5.</p>
+
+      <div class="phase-body">
+        <h4>Complete Coursework &amp; Fingerprinting</h4>
+        <p>Finish the 8-hour FIADA course if not already done. Keep the completion certificate &mdash; you will include it in the application packet. Schedule Livescan fingerprinting at an FDLE-approved vendor ($50&ndash;$80). Results go directly to FLHSMV.</p>
+
+        <h4>Surety Bond</h4>
+        <p>Florida requires a <strong>$25,000 surety bond</strong> for a VI (Independent) dealer license. With decent credit, the annual premium runs $250&ndash;$500. Use a surety specialist like Lance Surety, JW Surety Bonds, or Surety1. The bond goes in the name of the LLC, not the owner personally. Binding the bond takes 24&ndash;48 hours.</p>
+
+        <h4>Garage Liability Insurance</h4>
+        <p>Required by FLHSMV and every floor plan lender. Quote three carriers specifically writing Florida dealer policies: <strong>Federated Insurance, American Family, Kemper Specialty</strong>. Typical first-year premium: $1,500&ndash;$3,500. You can often pay monthly for an added fee. The binder letter is required for your application packet.</p>
+
+        <h4>Lease Execution &amp; Physical Setup Initiation</h4>
+        <p>With zoning confirmed, sign the lease. Immediately order your permanent dealer sign (lead time is 1&ndash;2 weeks &mdash; don't wait). Establish a dedicated landline number at the address &mdash; FLHSMV still requires a working phone line at the physical dealership. VoIP options like Ooma or a basic Frontier business line work.</p>
+
+        <h4>Submit HSMV Form 86056</h4>
+        <p>The application itself is <strong>HSMV Form 86056</strong>. Walk it in to the FLHSMV regional office in Tampa rather than mailing it &mdash; faster processing, you can fix minor issues on the spot. Application fee is approximately $300. The packet includes: completed form, bond, insurance binder, certificate of completion, lease, fingerprint receipt, entity documents, sales tax certificate, and photos of the lot and office.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-3">
+        <div class="checklist-title">Phase 3 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p3-course-complete"><label for="p3-course-complete">Complete 8-hour FIADA pre-licensing course</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-course-cert"><label for="p3-course-cert">Receive course completion certificate</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-fingerprints"><label for="p3-fingerprints">Complete Livescan fingerprinting</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-background"><label for="p3-background">Background check submitted to FLHSMV</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-bond"><label for="p3-bond">Bind $25,000 surety bond (LLC name)</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-insurance-quotes"><label for="p3-insurance-quotes">Quote 3 carriers for garage liability</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-insurance-bind"><label for="p3-insurance-bind">Bind garage liability policy; receive binder letter</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-lease-signed"><label for="p3-lease-signed">Sign lease (zoning confirmed in writing first)</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-sign-ordered"><label for="p3-sign-ordered">Order permanent dealer sign</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-phone"><label for="p3-phone">Activate dedicated landline at the lot</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-86056"><label for="p3-86056">Submit HSMV Form 86056 in person at Tampa FLHSMV office</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-app-fee"><label for="p3-app-fee">Pay state application fee (~$300)</label></div>
+        <div class="check-item"><input type="checkbox" id="p3-packet-copies"><label for="p3-packet-copies">Keep full duplicate application packet for records</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>Application submitted. Bond and insurance active. Lease signed. Dealer sign on order. Landline active. Awaiting FLHSMV inspection scheduling.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 4 ===================== -->
+<section id="phase-4">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">4</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 22 &ndash; 28 &middot; Week 4</div>
+          <div class="phase-title">Lot Setup &amp; Inspection Prep</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-4">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">Turn the empty space into a recognizably legitimate dealership. FLHSMV will inspect for basic commercial presence, not retail polish &mdash; but "basic" still has specific requirements.</p>
+
+      <div class="phase-body">
+        <h4>Office Buildout</h4>
+        <p>You need a real office with: a desk, two customer chairs, a locking filing cabinet for titles and contracts, a computer with a printer/scanner, and working phone. Total cost with used furniture: $1,500&ndash;$3,000. Do not overspend here &mdash; customers almost never care. The file cabinet is the one thing that must be high quality: you will store signed titles in it, and they cannot be lost or unsecured.</p>
+
+        <h4>Signage &amp; Display</h4>
+        <p>Install the permanent dealer sign. Verify the install complies with the lease terms and local signage ordinance. Clean and organize the display area. Stripe parking spaces if needed. Clearly delineate the customer parking area from the inventory area.</p>
+
+        <h4>Dealer Management System</h4>
+        <p>Start your <strong>Frazer</strong> trial ($55/mo after trial). Frazer is the de facto standard for small independents &mdash; handles inventory, buyer's orders, titles, bill of sale, F&amp;I math, and state reporting. Alternatives: DealerCenter, AutoManager, AutoRaptor. Begin learning the software now so you're fluent by the time your first car arrives.</p>
+
+        <h4>Tag Agency Relationship</h4>
+        <p>Identify 1&ndash;2 Tampa-area tag agencies that handle dealer title work. Introduce yourself in person. Ask about their dealer turnaround time and how they prefer paperwork submitted. Typical dealer-friendly agencies in the Tampa area handle title transfers in 3&ndash;7 business days.</p>
+
+        <h4>Floor Plan Applications</h4>
+        <p>With the license pending and lot ready, submit applications to <strong>NextGear Capital</strong>, <strong>Westlake Flooring</strong>, and <strong>Automotive Finance Corp (AFC)</strong> in parallel. Lenders will conditionally approve pending issuance of your license &mdash; they need to see the lot, your personal financial statement, business entity docs, and garage liability coverage. Applying to multiple lenders is standard practice and does not offend anyone.</p>
+
+        <h4>Inspection Binder</h4>
+        <p>Assemble every document FLHSMV might ask for into a single binder: application copy, bond, insurance, lease, course certificate, LLC docs, EIN letter, sales tax certificate, photos, sign installation receipt, phone bill. Walk the lot with the <a href="https://www.flhsmv.gov">FLHSMV inspection checklist</a> 48 hours before the inspection date.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-4">
+        <div class="checklist-title">Phase 4 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p4-desk"><label for="p4-desk">Office desk and 2+ customer chairs installed</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-filing"><label for="p4-filing">Locking filing cabinet for titles installed</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-computer"><label for="p4-computer">Computer, printer, scanner configured</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-phone-ready"><label for="p4-phone-ready">Dedicated dealer phone line tested and answering</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-sign-installed"><label for="p4-sign-installed">Permanent dealer sign installed and permitted</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-lot-clean"><label for="p4-lot-clean">Lot cleaned, striped, inventory area defined</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-cards"><label for="p4-cards">Business cards ordered</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-logo"><label for="p4-logo">Logo finalized (simple, functional)</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-frazer"><label for="p4-frazer">Frazer DMS trial started; basic setup complete</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-tag-agency"><label for="p4-tag-agency">Tag agency relationship opened (1&ndash;2 locations)</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-fp-nextgear"><label for="p4-fp-nextgear">NextGear Capital application submitted</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-fp-westlake"><label for="p4-fp-westlake">Westlake Flooring application submitted</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-fp-afc"><label for="p4-fp-afc">AFC (Automotive Finance Corp) application submitted</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-binder"><label for="p4-binder">Inspection binder assembled (all documents)</label></div>
+        <div class="check-item"><input type="checkbox" id="p4-prewalk"><label for="p4-prewalk">Pre-walked FLHSMV inspection checklist</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>Lot is inspection-ready. All three floor plan applications in underwriting. Frazer account set up. Tag agency relationships opened.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 5 ===================== -->
+<section id="phase-5">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">5</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 29 &ndash; 35 &middot; Week 5</div>
+          <div class="phase-title">License Issuance &amp; Auction Access</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-5">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">The license unlocks everything downstream. Once you pass inspection, 3&ndash;10 days later you have plates, auction access, and a live floor plan.</p>
+
+      <div class="phase-body">
+        <h4>FLHSMV Inspection Day</h4>
+        <p>Be physically present. Bring the binder. Answer questions directly. If the inspector notes a correctable issue, fix it same-day and request a re-inspection. Most fails are for trivial things: missing a sign detail, phone not answering, office furniture not in place, or an unlocked title cabinet.</p>
+
+        <h4>License Issuance</h4>
+        <p>After passing inspection, the license is typically issued in 3&ndash;10 days. Once issued, <strong>display it prominently in the office</strong> &mdash; required by state law and expected by every auction and lender. Order 5 dealer plates through FLHSMV (~$50 each). You will need them for test drives, trade pickups, and auction-to-lot transport.</p>
+
+        <h4>Finalizing the Floor Plan</h4>
+        <p>With the license issued, your conditional floor plan approvals become real. Pick one primary lender. <strong>NextGear is the default recommendation</strong> for a first-time Tampa dealer &mdash; they are on-site at Manheim Tampa, their interface is the most forgiving, and dealer auction integration is seamless. Westlake is an excellent backup for units NextGear declines. Typical starting line: $75,000&ndash;$150,000.</p>
+
+        <h4>Auction Access</h4>
+        <p>Register at <strong>Manheim Tampa</strong> (5109 Cone Rd) and <strong>ADESA Tampa</strong>. Registration requires your license, a floor plan letter from your lender, and garage liability certificate. Once approved, install the Manheim Express app, set up your dealer profile, and get familiar with the bidding interface before your first sale day.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-5">
+        <div class="checklist-title">Phase 5 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p5-inspection-pass"><label for="p5-inspection-pass">Pass FLHSMV lot inspection</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-license-issued"><label for="p5-license-issued">License issued and displayed in office</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-plates"><label for="p5-plates">Order 5 dealer plates</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-fp-chosen"><label for="p5-fp-chosen">Select primary floor plan lender</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-fp-closed"><label for="p5-fp-closed">Close floor plan line; receive line amount and terms</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-fp-terms-review"><label for="p5-fp-terms-review">Review curtailment schedule and rate structure</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-auction-letter"><label for="p5-auction-letter">Obtain auction access letter from floor plan lender</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-manheim-reg"><label for="p5-manheim-reg">Register at Manheim Tampa (5109 Cone Rd)</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-adesa-reg"><label for="p5-adesa-reg">Register at ADESA Tampa</label></div>
+        <div class="check-item"><input type="checkbox" id="p5-manheim-app"><label for="p5-manheim-app">Install Manheim Express app and test bidding flow</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>FL dealer license in hand. Dealer plates ordered. Floor plan active. Manheim Tampa and ADESA Tampa access confirmed.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 6 ===================== -->
+<section id="phase-6">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">6</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 36 &ndash; 42 &middot; Week 6</div>
+          <div class="phase-title">First Inventory</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-6">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">Buy slow. Buy boring. The first 5 cars should be the three things Tampa buyers want most: reliable, affordable, and familiar. Avoid anything that looks interesting to you personally.</p>
+
+      <div class="phase-body">
+        <h4>First Auction as Observer</h4>
+        <p>Attend Manheim Tampa's Thursday sale <em>without buying</em> the first time. Watch how cars run through the lane, how fast the bidding moves, how the arbitration process works, and how dealers inspect units in the pre-sale lot. You will learn more in three hours of watching than in any training video.</p>
+
+        <h4>Target Inventory</h4>
+        <p>For a Tampa independent, the highest-velocity inventory is:</p>
+        <ul>
+          <li><strong>Price band:</strong> $8,000 &ndash; $15,000 retail</li>
+          <li><strong>Makes:</strong> Honda, Toyota, Nissan, Hyundai, Kia</li>
+          <li><strong>Body:</strong> Sedans and small SUVs (Civic, Corolla, CR-V, Rogue, Elantra, Sportage)</li>
+          <li><strong>Mileage:</strong> Under 120,000</li>
+          <li><strong>Condition:</strong> Clean Carfax, no accidents, no branded titles</li>
+          <li><strong>Target gross:</strong> 20&ndash;25% after recon</li>
+        </ul>
+        <p>Avoid: European luxury, anything with AC issues in Florida, lifted trucks, project cars, anything that "just needs a little work".</p>
+
+        <h4>Buy &amp; Recon Loop</h4>
+        <p>For each unit you bid on, run the Carfax and AutoCheck before bidding. Inspect in person in the pre-sale lot. After purchase, budget:</p>
+        <ul>
+          <li>$50&ndash;$100 pre-sale mechanical inspection</li>
+          <li>$150&ndash;$400 typical mechanical recon</li>
+          <li>$75&ndash;$150 detail</li>
+          <li>$50&ndash;$100 transport if needed</li>
+        </ul>
+        <p>Build relationships with 1&ndash;2 local independent shops for reliable recon. Avoid chains for recon work &mdash; too slow and too expensive.</p>
+
+        <h4>Photograph &amp; Catalog</h4>
+        <p>Each car gets <strong>20+ photos minimum</strong>: exterior (8 angles), interior (dash, seats, rear seats, cargo), engine bay, underneath, tires, odometer, VIN, and any notable features. Add a 60-second walkaround video. Photography happens <em>after</em> detail, in bright natural light. Enter each into Frazer immediately with VIN, cost basis, recon cost, and target retail.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-6">
+        <div class="checklist-title">Phase 6 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p6-auction-observe"><label for="p6-auction-observe">Attend first Manheim Tampa sale as observer</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-shop-relationships"><label for="p6-shop-relationships">Establish recon relationships with 1&ndash;2 local shops</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-detailer"><label for="p6-detailer">Engage mobile detailer</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-buy-1"><label for="p6-buy-1">Purchase first unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-buy-2"><label for="p6-buy-2">Purchase second unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-buy-3"><label for="p6-buy-3">Purchase third unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-buy-4"><label for="p6-buy-4">Purchase fourth unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-buy-5"><label for="p6-buy-5">Purchase fifth unit (optional if capital tight)</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-recon-complete"><label for="p6-recon-complete">Recon complete on all units</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-detail-complete"><label for="p6-detail-complete">Detail complete on all units</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-photos"><label for="p6-photos">20+ photos taken per unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-videos"><label for="p6-videos">Walkaround video recorded per unit</label></div>
+        <div class="check-item"><input type="checkbox" id="p6-frazer-entry"><label for="p6-frazer-entry">All units entered in Frazer with cost + target price</label></div>
+      </div>
+
+      <div class="warning"><strong>Cash Discipline</strong>With a floor plan line of $100k, do not buy $100k worth of cars. Buy $40k&ndash;$60k for your first round. You want to prove turn velocity before stretching the line. Curtailments on unsold units will destroy your margin if you over-buy early.</div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>4&ndash;6 inspection-ready, detailed, photographed units on the lot. Each entered in Frazer with full cost and target pricing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 7 ===================== -->
+<section id="phase-7">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">7</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 43 &ndash; 49 &middot; Week 7</div>
+          <div class="phase-title">Listings &amp; Go-Live</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-7">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">Get the inventory in front of buyers. For Tampa independents, Facebook Marketplace is still the highest-ROI channel, followed by Craigslist and CarGurus. Paid listing aggregators are optional in month one.</p>
+
+      <div class="phase-body">
+        <h4>Listing Channels</h4>
+        <ul>
+          <li><strong>Facebook Marketplace</strong> &mdash; free, largest Tampa buyer pool, refresh every 48 hours</li>
+          <li><strong>Craigslist Tampa Bay</strong> &mdash; free, still active, especially for $8k&ndash;$12k range</li>
+          <li><strong>Offerup</strong> &mdash; free, growing, good for mobile-first buyers</li>
+          <li><strong>CarGurus</strong> &mdash; paid ($300&ndash;$800/mo), optional month 1, recommended month 2</li>
+          <li><strong>Cars.com / AutoTrader</strong> &mdash; paid, higher-intent buyers, recommended after the first 10 sales</li>
+          <li><strong>Your own site</strong> &mdash; Frazer includes a basic site, or use Dealer Car Search ($100&ndash;$200/mo)</li>
+        </ul>
+
+        <h4>Google Business Profile</h4>
+        <p>Set up the Google Business Profile listing for the dealership. Add 20+ photos of the lot, office, and key inventory. Request reviews from anyone who's bought a car informally from you, any early customers, friends, and family. A profile with 10&ndash;15 reviews in month one dramatically outperforms one with zero.</p>
+
+        <h4>Website Launch</h4>
+        <p>A simple one-page website is fine for month one. Must have: phone number, address with map, business hours, inventory feed from Frazer, "text us" button that goes to your dealer line. Do not over-engineer &mdash; 90% of leads in the first 90 days will come from marketplace listings, not your website.</p>
+
+        <h4>Soft Open</h4>
+        <p>Before paid ads, run a soft open: invite friends, family, FIADA contacts, and anyone you know who might be looking for a car. Get real foot traffic on the lot. Watch how they interact with the inventory. Take feedback on pricing and presentation. It is infinitely easier to adjust before you are paying for ads.</p>
+
+        <h4>First Paid Ad</h4>
+        <p>Launch a small Facebook ad campaign. $200 budget, 7-day run. Target: Tampa, Brandon, Riverview, Plant City; ages 25&ndash;55; interest category "buying a car" or similar. Creative: your best-looking unit on a bright background. Destination: direct message to your dealer line or a Facebook lead form.</p>
+      </div>
+
+      <div class="checklist" data-checklist="phase-7">
+        <div class="checklist-title">Phase 7 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p7-fb-listings"><label for="p7-fb-listings">All inventory listed on Facebook Marketplace</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-cl-listings"><label for="p7-cl-listings">All inventory listed on Craigslist Tampa Bay</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-offerup"><label for="p7-offerup">All inventory listed on Offerup</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-cargurus"><label for="p7-cargurus">CarGurus account set up (paid optional)</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-gbp"><label for="p7-gbp">Google Business Profile verified and populated</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-gbp-photos"><label for="p7-gbp-photos">20+ photos uploaded to Google Business Profile</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-gbp-reviews"><label for="p7-gbp-reviews">First 3&ndash;5 reviews requested</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-website"><label for="p7-website">Simple website launched with inventory feed</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-text-line"><label for="p7-text-line">Customer text line active and tested</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-soft-open"><label for="p7-soft-open">Soft-open walkthrough with friends and family</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-fb-ad"><label for="p7-fb-ad">First $200 Facebook ad campaign launched</label></div>
+        <div class="check-item"><input type="checkbox" id="p7-lead-workflow"><label for="p7-lead-workflow">Lead response workflow documented (response time target &lt;15 min)</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria</strong>All inventory listed across 3+ channels. Google Business Profile live. Website launched. First ads running. Lead response process in place.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 8 ===================== -->
+<section id="phase-8">
+  <div class="container">
+    <div class="phase">
+      <div class="phase-header">
+        <div class="phase-num">8</div>
+        <div class="phase-head-text">
+          <div class="phase-meta">Days 50 &ndash; 60 &middot; Week 8&ndash;9</div>
+          <div class="phase-title">First Sales &amp; Systems</div>
+        </div>
+        <div class="phase-progress" data-progress-for="phase-8">0 / 0</div>
+      </div>
+
+      <p class="phase-summary">Close the loop: first sale, first title filed, first curtailment paid, first lessons learned. Everything gets harder and easier at the same time.</p>
+
+      <div class="phase-body">
+        <h4>Financing Partners</h4>
+        <p>Not every buyer pays cash. Get approved with at least 3 lenders spanning the credit spectrum:</p>
+        <ul>
+          <li><strong>Credit Acceptance</strong> &mdash; subprime workhorse, will fund almost any credit profile</li>
+          <li><strong>Westlake Financial</strong> &mdash; subprime / near-prime, separate division from their floor plan arm</li>
+          <li><strong>Global Lending Services</strong> &mdash; subprime, active in Florida</li>
+          <li><strong>Capital One Auto Navigator</strong> &mdash; prime, easiest prime lender for new dealers</li>
+          <li><strong>Local credit unions</strong> (Suncoast, GTE Financial, MIDFLORIDA) &mdash; prime buyers, often excellent rates</li>
+        </ul>
+
+        <h4>Transaction Systems</h4>
+        <p>Template every document in Frazer: buyer's order, bill of sale, odometer disclosure, privacy notice, as-is acknowledgment, Florida title application. Frazer generates these automatically once your dealer info is configured. Run through a full dry-run transaction (bill of sale through title submission) before your first real customer.</p>
+
+        <h4>First Sales Execution</h4>
+        <p>When the first real customer arrives, follow the process. Do not improvise. Complete the buyer's order in Frazer. Collect ID, insurance proof, and payment. Sign all required documents. File title paperwork through your tag agency within the state deadline (Florida dealer title transfers have specific timing requirements &mdash; confirm with your tag agency). Pay off the floor plan unit the same day you sell it.</p>
+
+        <h4>Curtailment Reality Check</h4>
+        <p>The first curtailment payment typically hits 45&ndash;60 days after purchase on each unit. If a car is still on the lot at day 45, the lender wants a partial principal payment (typically 10&ndash;15% of the original price). This is why the "buy slow" rule from Phase 6 matters. Track curtailment due dates per unit in Frazer or a spreadsheet &mdash; missing one is a covenant violation.</p>
+
+        <h4>Early Metrics &amp; Review</h4>
+        <p>Track these weekly from day 50 forward:</p>
+        <ul>
+          <li><strong>Gross profit per unit</strong> (target $2,000+ avg)</li>
+          <li><strong>Days on lot per unit</strong> (target &lt; 30)</li>
+          <li><strong>Cost per lead</strong> from each channel</li>
+          <li><strong>Lead-to-showing conversion</strong></li>
+          <li><strong>Showing-to-sale conversion</strong> (target 30%+)</li>
+          <li><strong>Total floor plan interest + curtailments paid</strong></li>
+        </ul>
+      </div>
+
+      <div class="checklist" data-checklist="phase-8">
+        <div class="checklist-title">Phase 8 Checklist</div>
+        <div class="check-item"><input type="checkbox" id="p8-credit-acceptance"><label for="p8-credit-acceptance">Approved with Credit Acceptance</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-westlake-finance"><label for="p8-westlake-finance">Approved with Westlake Financial</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-gls"><label for="p8-gls">Approved with Global Lending Services</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-capone"><label for="p8-capone">Approved with Capital One Auto Navigator</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-credit-union"><label for="p8-credit-union">Relationship established with 1+ local credit union</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-buyers-order"><label for="p8-buyers-order">Buyer's order template finalized in Frazer</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-bill-of-sale"><label for="p8-bill-of-sale">Bill of sale template finalized</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-odometer"><label for="p8-odometer">Odometer disclosure template finalized</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-as-is"><label for="p8-as-is">As-is acknowledgment template finalized</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-dry-run"><label for="p8-dry-run">Full dry-run transaction completed</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-sale-1"><label for="p8-sale-1">First sale closed</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-sale-2"><label for="p8-sale-2">Second sale closed</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-title-filed"><label for="p8-title-filed">First title transfer successfully filed through tag agency</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-fp-payoff"><label for="p8-fp-payoff">First floor plan payoff executed same-day as sale</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-first-curtailment"><label for="p8-first-curtailment">First curtailment payment made on-time</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-metrics"><label for="p8-metrics">Weekly metrics dashboard set up and tracked</label></div>
+        <div class="check-item"><input type="checkbox" id="p8-weekly-review"><label for="p8-weekly-review">First weekly P&amp;L review conducted</label></div>
+      </div>
+
+      <div class="deliverable"><strong>Exit Criteria &middot; Day 60</strong>License active. Lot operational. Inventory listed and moving. 1&ndash;3 sales closed. Titles filed. Floor plan payoff flow tested. Metrics tracked. You are officially a Tampa car dealer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BUDGET ===================== -->
+<section id="budget">
+  <div class="container">
+    <div class="section-eyebrow">Reference</div>
+    <h2 class="section-title">Realistic 60-Day Budget</h2>
+    <p class="section-intro">Built from a $50,000 liquid starting position. Leaves ~$14,000 buffer for unexpected expenses and opportunistic inventory buys. Tight but survivable.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Detail</th>
+          <th class="num">Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Entity &amp; Licensing</td><td>LLC, EIN, DR-1, FIADA course, fingerprints, FLHSMV fee</td><td class="num">$800</td></tr>
+        <tr><td>Surety Bond</td><td>$25k bond annual premium</td><td class="num">$400</td></tr>
+        <tr><td>Garage Liability</td><td>First 2 months of insurance</td><td class="num">$500</td></tr>
+        <tr><td>FIADA Membership</td><td>Annual member dues</td><td class="num">$400</td></tr>
+        <tr><td>Lease</td><td>First month + last month + security deposit</td><td class="num">$6,000</td></tr>
+        <tr><td>Office Buildout</td><td>Desk, chairs, filing cabinet, computer, printer</td><td class="num">$2,500</td></tr>
+        <tr><td>Sign &amp; Branding</td><td>Permanent dealer sign, install, business cards, logo</td><td class="num">$1,800</td></tr>
+        <tr><td>Phone &amp; Utilities</td><td>Landline setup + 2 months utilities</td><td class="num">$400</td></tr>
+        <tr><td>DMS &amp; Website</td><td>Frazer + basic website, first 2 months</td><td class="num">$250</td></tr>
+        <tr><td>Floor Plan Down Payments</td><td>~10% down on 5 units @ $10k avg cost</td><td class="num">$5,000</td></tr>
+        <tr><td>Recon &amp; Detail</td><td>5 units x $400 avg recon + detail</td><td class="num">$2,000</td></tr>
+        <tr><td>Marketing</td><td>Facebook ads, CarGurus, photography supplies</td><td class="num">$1,200</td></tr>
+        <tr><td>Dealer Plates</td><td>5 dealer plates</td><td class="num">$250</td></tr>
+        <tr><td>Operating Reserve</td><td>2 months rent + utilities + floor plan curtailments</td><td class="num">$12,000</td></tr>
+        <tr><td>Contingency</td><td>Unexpected costs, inventory opportunities, buffer</td><td class="num">$3,500</td></tr>
+        <tr class="total"><td>Total</td><td>60-day launch capital requirement</td><td class="num">$37,000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info"><strong>Buffer Math</strong>$50,000 liquid start minus $37,000 launch cost = ~$13,000 working buffer. This is survivable but not comfortable. If you can start with $60&ndash;$75k, the buffer becomes genuinely comfortable and your decision-making in months 2&ndash;3 becomes far better.</div>
+  </div>
+</section>
+
+<!-- ===================== RISK REGISTER ===================== -->
+<section id="risks">
+  <div class="container">
+    <div class="section-eyebrow">Reference</div>
+    <h2 class="section-title">Risk Register</h2>
+    <p class="section-intro">The three risks that kill first-time Tampa dealerships before month three. Mitigate them preemptively &mdash; they are all avoidable with proper diligence.</p>
+
+    <div class="risk-item">
+      <h4>Zoning Surprise <span class="risk-badge">Critical &middot; Phase 2</span></h4>
+      <p>Lot is not actually zoned for auto sales, or prior-use designation was misrepresented. You discover this after signing the lease and spending weeks on setup. Result: lost rent, lost time, sometimes a legal battle.</p>
+      <div class="mitigation"><strong>Mitigation</strong>Never sign a lease without a written zoning verification letter from Hillsborough County Development Services. Make zoning confirmation a contingency in the LOI. Walk away from any landlord who won't allow you to verify.</div>
+    </div>
+
+    <div class="risk-item">
+      <h4>Floor Plan Denial <span class="risk-badge">High &middot; Phase 4</span></h4>
+      <p>Your primary floor plan lender declines. Usually driven by personal credit, cash reserves, or lack of dealer experience. Result: no line of credit, no inventory, license sits idle.</p>
+      <div class="mitigation"><strong>Mitigation</strong>Apply to NextGear, Westlake, and AFC in parallel in Phase 4. One will approve even if others decline. If all three decline, consider starting smaller with <strong>cash inventory only</strong> for 60&ndash;90 days until you have a sales track record to apply with.</div>
+    </div>
+
+    <div class="risk-item">
+      <h4>FLHSMV Inspection Fail <span class="risk-badge">Medium &middot; Phase 5</span></h4>
+      <p>Inspector finds a correctable deficiency &mdash; missing sign details, phone not answering, office not furnished, title cabinet unlocked, or display area not meeting minimum. Adds 1&ndash;2 weeks to timeline.</p>
+      <div class="mitigation"><strong>Mitigation</strong>Pre-walk the FLHSMV inspection checklist 48 hours before inspection. Have every document in a binder. Test the phone line. Ensure sign, office, and display are all in place. Fix any issue on-site during inspection if possible.</div>
+    </div>
+
+    <div class="risk-item">
+      <h4>Over-Buying Inventory <span class="risk-badge">High &middot; Phase 6</span></h4>
+      <p>You get approved for a $150k floor plan line and buy $150k of inventory immediately. By day 45, multiple units haven't sold, curtailments compound, interest accrues, and your cash reserves evaporate.</p>
+      <div class="mitigation"><strong>Mitigation</strong>Use 40&ndash;50% of your floor plan line for the first round. Prove the sell-through cycle before stretching. Target: every unit out the door in under 30 days. Any unit approaching 45 days gets aggressive repricing.</div>
+    </div>
+
+    <div class="risk-item">
+      <h4>Title Processing Delays <span class="risk-badge">Medium &middot; Phase 8</span></h4>
+      <p>Florida has strict timing requirements for dealer title transfers. Missing a deadline creates customer friction, tag agency complications, and possible state penalties.</p>
+      <div class="mitigation"><strong>Mitigation</strong>Build a tight relationship with 1 dealer-friendly tag agency. Confirm their dealer turnaround time in advance. Submit paperwork same-day or next-day after every sale. Keep titles in a locked, organized, single location.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LENDERS ===================== -->
+<section id="lenders">
+  <div class="container">
+    <div class="section-eyebrow">Reference</div>
+    <h2 class="section-title">Floor Plan Lender Directory</h2>
+    <p class="section-intro">Active floor plan lenders serving the Tampa independent dealer market. Apply to at least two in parallel for redundancy.</p>
+
+    <div class="lender-grid">
+      <div class="lender-card">
+        <h4>NextGear Capital</h4>
+        <div class="lender-tag">Primary Recommendation</div>
+        <p>Manheim-owned. On-site representation at Manheim Tampa. Most forgiving of new dealer profiles. Industry-standard interface. Best choice for first-time Tampa independents.</p>
+      </div>
+      <div class="lender-card">
+        <h4>Westlake Flooring</h4>
+        <div class="lender-tag">Strong Backup</div>
+        <p>Aggressive with new and subprime dealer profiles. Competitive rates. Will often approve lines that NextGear declines. Strong digital tools.</p>
+      </div>
+      <div class="lender-card">
+        <h4>Automotive Finance Corp</h4>
+        <div class="lender-tag">Established Alternative</div>
+        <p>KAR-owned (parent of ADESA). Strong presence at ADESA Tampa. Slightly tighter underwriting than NextGear but competitive once approved.</p>
+      </div>
+      <div class="lender-card">
+        <h4>Kinetic Advantage</h4>
+        <div class="lender-tag">Independent Focus</div>
+        <p>Newer, aggressive dealer-friendly programs. Good middle-ground option. Worth an application for rate comparison.</p>
+      </div>
+      <div class="lender-card">
+        <h4>Floor Plan Xpress</h4>
+        <div class="lender-tag">Smaller Shop</div>
+        <p>Smaller lender with lighter underwriting. Good option if the larger lenders all decline. Higher rates but faster approval.</p>
+      </div>
+      <div class="lender-card">
+        <h4>Advantage Funding</h4>
+        <div class="lender-tag">Specialty Lender</div>
+        <p>Auction-focused floor plan provider. Sometimes approves marginal credit profiles with larger down payment requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESOURCES ===================== -->
+<section id="resources">
+  <div class="container">
+    <div class="section-eyebrow">Reference</div>
+    <h2 class="section-title">Florida &amp; Tampa Resources</h2>
+    <p class="section-intro">Key agencies, forms, and contacts. Verify current URLs and fees directly &mdash; state processes change periodically.</p>
+
+    <div class="resources">
+      <div class="resource">
+        <div class="resource-label">State Agency</div>
+        <div class="resource-name">FLHSMV &middot; Motor Vehicle Dealers</div>
+        <div class="resource-detail">Dealer licensing authority. Form HSMV 86056 is the primary application. Tampa regional office handles in-person submission.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">State Portal</div>
+        <div class="resource-name">Sunbiz.org</div>
+        <div class="resource-detail">Florida Division of Corporations. LLC formation, $125 filing fee, online same-day processing.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Tax Registration</div>
+        <div class="resource-name">Florida DOR &middot; DR-1 Form</div>
+        <div class="resource-detail">Sales tax registration. Hillsborough County total sales tax is 7.5% (6% state + 1.5% county surtax).</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Industry Association</div>
+        <div class="resource-name">FIADA</div>
+        <div class="resource-detail">Florida Independent Automobile Dealers Association. $400/yr. Weekly 8-hour pre-licensing classes in Tampa.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">County Zoning</div>
+        <div class="resource-name">Hillsborough County Development Services</div>
+        <div class="resource-detail">Zoning verification letters, permit status, prior-use history. Always request in writing before signing any lease.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Wholesale Auction</div>
+        <div class="resource-name">Manheim Tampa</div>
+        <div class="resource-detail">5109 Cone Rd, Tampa FL 33619. Primary wholesale auction. Thursday weekly sales. Requires floor plan approval letter to register.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Wholesale Auction</div>
+        <div class="resource-name">ADESA Tampa</div>
+        <div class="resource-detail">Wimauma area. Secondary wholesale auction. KAR-owned sister company to AFC floor plan.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">DMS Software</div>
+        <div class="resource-name">Frazer Computing</div>
+        <div class="resource-detail">Industry-standard DMS for small independents. ~$55/mo. Handles inventory, buyer's orders, titles, F&amp;I, and state reporting.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Surety Bond</div>
+        <div class="resource-name">Lance Surety / JW Surety / Surety1</div>
+        <div class="resource-detail">Specialty brokers for the $25k Florida dealer bond. Annual premium $250&ndash;$500 with decent credit.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Insurance Carriers</div>
+        <div class="resource-name">Federated / American Family / Kemper</div>
+        <div class="resource-detail">Primary garage liability carriers writing Florida independent dealer policies. $1,500&ndash;$3,500/yr typical premium.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Vehicle History</div>
+        <div class="resource-name">Carfax + AutoCheck (dealer)</div>
+        <div class="resource-detail">Both are needed. Carfax for retail customer display; AutoCheck for wholesale auction bidding decisions.</div>
+      </div>
+      <div class="resource">
+        <div class="resource-label">Listing Platform</div>
+        <div class="resource-name">Facebook Marketplace</div>
+        <div class="resource-detail">Free. Highest-ROI channel for Tampa independents in the $8k&ndash;$15k price band. Refresh listings every 48 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <strong>Tampa Used Car Dealership &middot; 60-Day Launch Blueprint</strong><br>
+    Progress is saved automatically in your browser's local storage.
+    <div class="disclaim">
+      This document is an operational playbook built from publicly-available information and common dealer practice. It is not legal, tax, or financial advice. State requirements change &mdash; verify every regulatory detail directly with FLHSMV, the Florida Department of Revenue, Hillsborough County, and licensed professionals before acting on any item.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const STORAGE_KEY = 'tpa-dealership-blueprint-v1';
+
+  function load() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function save(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {}
+  }
+
+  function updateProgress() {
+    const allChecks = document.querySelectorAll('.check-item input[type="checkbox"]');
+    const total = allChecks.length;
+    const done = Array.from(allChecks).filter(c => c.checked).length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+
+    const bar = document.getElementById('overall-progress');
+    const text = document.getElementById('overall-text');
+    if (bar) bar.style.width = pct + '%';
+    if (text) text.textContent = pct + '% complete (' + done + '/' + total + ')';
+
+    document.querySelectorAll('[data-checklist]').forEach(list => {
+      const key = list.getAttribute('data-checklist');
+      const items = list.querySelectorAll('input[type="checkbox"]');
+      const checked = Array.from(items).filter(i => i.checked).length;
+      const progressEl = document.querySelector('[data-progress-for="' + key + '"]');
+      if (progressEl) progressEl.textContent = checked + ' / ' + items.length;
+    });
+  }
+
+  function init() {
+    const state = load();
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(box => {
+      if (state[box.id]) box.checked = true;
+      box.addEventListener('change', () => {
+        const s = load();
+        if (box.checked) s[box.id] = true;
+        else delete s[box.id];
+        save(s);
+        updateProgress();
+      });
+    });
+    updateProgress();
+  }
+
+  window.resetProgress = function() {
+    if (!confirm('Reset all checklist progress? This cannot be undone.')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(b => b.checked = false);
+    updateProgress();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>
